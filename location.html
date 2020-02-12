@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Site</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href="index.html"><img class="logo__img" src="img/logo.png" alt="logo"></a>
+		</div>
+		<nav>
+			<div class="topnav" id="myTopnav">
+				<a href="index.html">HOME</a>
+				<a href="projectsGal.html">PROJECTS</a>
+				<a href="blog.html">BLOG</a>
+				<a href="contacts.html">CONTACT</a>
+				<a href="about.html">ABOUT</a>
+				<a href="services.html">SERVICES</a>
+				<a href="location.html">LOCATION</a>
+				<a id="menu" href="#" class="icon">&#9776;</a>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<h1>LOCATION</h1>
+		<div id="map"></div>
+	</main>
+
+	<footer>
+		<nav>
+			<a href="index.html">HOME</a>
+			<a href="projectsGal.html">PROJECTS</a>
+			<a href="blog.html">BLOG</a>
+			<a href="contacts.html">CONTACT</a>
+			<a href="about.html">ABOUT</a>
+			<a href="services.html">SERVICES</a>
+			<a href="location.html">LOCATION</a>
+		</nav>
+		<div class="logo">
+			<a href="index.html"><img class="graficlogo" src="img/logo.png"></a>
+		</div>
+		<div class="social">
+			<a href="#"><img src="img/social/em.png"></a>
+			<a href="#"><img src="img/social/face.png"></a>
+			<a href="#"><img src="img/social/goo.png"></a>
+			<a href="#"><img src="img/social/inst.png"></a>
+			<a href="#"><img src="img/social/pint.png"></a>
+		</div>
+	</footer>
+
+	<script>
+	// Initialize and add the map
+		function initMap() {
+  	// The location of Uluru
+  		var uluru = {lat: 56.8297626, lng: 60.5743882};
+  	// The map, centered at Uluru
+  		var map = new google.maps.Map(
+    		document.getElementById('map'), {zoom: 8, center: uluru});
+	// The marker, positioned at Uluru
+  		var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+    </script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
